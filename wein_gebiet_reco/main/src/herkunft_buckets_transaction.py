@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
-
-from helper_functions import year_to_months, recency_fac_linear
+from recency_functions import year_to_months, recency_fac_linear
 
 def herkunft_buckets_transaction(raw_data, path):
     transaction_table = raw_data.copy()

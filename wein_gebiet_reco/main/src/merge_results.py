@@ -1,10 +1,8 @@
-# Addiere die ergebnisse der beiden gebiet_bucket dataframes
+'''Addiere die ergebnisse der beiden gebiet_bucket dataframes'''
 import pandas as pd
 import numpy as np
 import math
 import scipy.stats as st
-import sys
-from time import time
 import gc
 
 tracking_results_path_m = r"C:\Users\gia\Desktop\datascience\Wein_gebiet_reco\csv_results\gebiet_buckets_tracking.csv"

@@ -55,7 +55,7 @@ def load_transaction():
     transaction = pd.read_sql_query(transaction_query, engine, params={"date": then})
 
     # docdate to datetime datatype
-    transaction['docdate'] = pd.to_datetime(transaction['docdate'].copy()) # <---- slice of a copy warning
+    transaction['docdate'] = pd.to_datetime(transaction['docdate'].copy())
 
     return transaction
 
@@ -64,5 +64,5 @@ def load_trackingevents():
     trackingevents = trackingevents.drop_duplicates() # exakt doppelte zeilen droppen da durch einen bug product_views doppelt sind
 
     # docdate to datetime datatype
-    trackingevents['timestamp'] = pd.to_datetime(trackingevents['timestamp'].copy()) # <---- slice of a copy warning
+    trackingevents['timestamp'] = pd.to_datetime(trackingevents['timestamp'].copy())
     return trackingevents

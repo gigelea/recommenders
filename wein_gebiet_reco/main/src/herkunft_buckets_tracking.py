@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from helper_functions import year_to_months, recency_fac_linear
+from recency_functions import year_to_months, recency_fac_linear
 
 def herkunft_buckets_tracking(add_bas_pro_view_events, path):
     v_rec_fac = np.vectorize(lambda x: recency_fac_linear(x), otypes=[np.float32])
